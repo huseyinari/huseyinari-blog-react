@@ -39,7 +39,7 @@ class Post extends Component{
     }
     componentDidMount(){
         window.scrollTo(0,0);
-        setTimeout(this.getDatasFromServer,500); // bilgileri sunucudan getir
+        this.getDatasFromServer(); // bilgileri sunucudan getir
         this.timeout = setTimeout(this.setViewCountToServer,1000*30);  // 30 saniye sonra post'un görüntüleme sayısını 1 artır
     }
     componentWillUnmount(){ // component kaldırılacağı zaman post görüntülenme sayısını artıran geri sayımı durdur
@@ -159,7 +159,7 @@ class Post extends Component{
     }
     commentButtonClicked = () => {
         this.setState({commentLoading:true});   // yorum yap butonu yerine spinner gelsin
-        setTimeout(this.setCommentOrAnswer,250);
+        this.setCommentOrAnswer();
     }
     goToCommentForm = () => {
         window.scrollTo({left:0,top:this.commentFormRef.current.offsetTop,behavior:'smooth'});  // scrollu yorum yapma formuna konumlandırıyor.

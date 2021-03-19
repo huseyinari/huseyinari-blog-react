@@ -13,7 +13,7 @@ class Admin extends Component {
         isAdmin:null
     }
     componentDidMount(){
-        setTimeout(this.adminControl,500);
+        this.adminControl();
     }
     adminControl = () => {  // tarayıcı deposundaki token var mı ? varsa geçerli bir anahtar mı ?
         const url = apiURL + '/api/admin/admin_control';

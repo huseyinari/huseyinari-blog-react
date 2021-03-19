@@ -93,9 +93,9 @@ class AddPost extends Component {
         const {selectedPost} = this.props;
 
         if(selectedPost === null)
-            setTimeout(this.addPostToServer,250);
+            this.addPostToServer();
         else
-            setTimeout(this.updatePostToServer,250);
+            this.updatePostToServer();
     }
     addPostToServer = () => {
         const url = apiURL + '/api/admin/add_post';

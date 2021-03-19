@@ -32,7 +32,7 @@ class Home extends Component{
     }
     componentDidMount(){
         window.scrollTo(0,0);
-        setTimeout(this.getDatasFromServer,500); // sayfa yüklendikten 500 ms sonra verileri çek - yükleniyor animasyonu bir miktar beklesin diye
+        this.getDatasFromServer(); // sayfa yüklendikten 500 ms sonra verileri çek - yükleniyor animasyonu bir miktar beklesin diye
     }
     getDatasFromServer = () => {
         const {currentPage} = this.state;
@@ -81,7 +81,7 @@ class Home extends Component{
         this.setState({latestPosts:null});
         this.goToLatestPosts();
         sessionStorage.setItem('currentPage',page);
-        setTimeout(() => this.getLatestPosts(page),300);
+        this.getLatestPosts(page);
     }
     mapRandomPosts = () => {
         const {randomPosts} = this.state;

@@ -56,9 +56,9 @@ class Categories extends Component {
         this.setState({addOrUpdateLoading:true});
         
         if(selectedCategory === null)
-            setTimeout(this.addCategoryToServer,250);
+            this.addCategoryToServer();
         else
-            setTimeout(this.updateCategoryToServer,250);
+            this.updateCategoryToServer();
     }
     addCategoryToServer = () => { // server'a istek gönderme
         const url = apiURL + '/api/admin/add_category';

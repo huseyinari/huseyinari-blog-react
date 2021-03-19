@@ -27,7 +27,7 @@ class CategoryPosts extends Component {
       currentPage:1
     }
     componentDidMount(){
-      setTimeout(this.getDatasFromServer,500);
+      this.getDatasFromServer();
     }
     getDatasFromServer = () => {
       this.getCategoryDetails();  
@@ -65,7 +65,7 @@ class CategoryPosts extends Component {
     }
     paginateClicked = (page) => {
       this.setState({posts:null});
-      setTimeout(() => this.getPosts(page),300);
+      this.getPosts(page);
     }
     mapPosts = () => {
       const {posts,categoryDetails} = this.state;
