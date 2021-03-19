@@ -1,0 +1,728 @@
+/**************************************
+
+    File Name: tech.css
+    Template Name: Tech Blog
+    Created By: HTML.Design
+    http://themeforest.net/user/wpdestek
+
+**************************************/
+
+body {
+    background-color: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+body,
+.navbar-toggleable-md .navbar-nav .nav-link,
+.market-header,
+.btn,
+.dropdown-item,
+.form-control,
+p {
+    font-family: 'Poppins', serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 600;
+}
+
+.navbar-inverse .navbar-nav .nav-link,
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.header .navbar-nav .has-submenu ul {
+    margin-top: 17px !important
+}
+
+.header .navbar-nav .has-submenu.menu-large ul {
+    margin-top: 0px !important;
+}
+
+.navbar-inverse .navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:hover,
+.navbar-inverse .navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:focus {
+    opacity: 0.8;
+}
+
+.dropdown-toggle::after {
+    margin-top: -4px;
+}
+
+.mr-2 .nav-link {
+    font-size: 21px !important;
+    padding: 0.6rem 0.6rem 0 !important;
+}
+
+.first-slot {
+    float: left;
+    width: 50%;
+}
+
+.last-slot,
+.second-slot {
+    float: left;
+    width: 25%;
+}
+
+.first-slot .blog-meta h4 {
+    font-size: 31px;
+    line-height: 1.4;
+}
+
+.first-section .blog-meta h4 {
+    font-weight: 600;
+    padding: 0.8rem 0 0.5rem !important;
+}
+
+.blog-meta.big-meta h4 {
+    font-size: 24px;
+}
+
+.single-wrapper {
+    margin-top: 3.5rem;
+}
+
+.first-section {
+    margin-top: 4rem;
+}
+
+.blog-grid-system .color-orange {
+    display: block;
+    margin-top: 1rem;
+}
+
+.blog-grid-system .color-orange a {
+    color: #ffffff !important;
+    font-size: 13px;
+    padding: 0 0.7rem;
+    border-radius: 3px;
+}
+
+.blog-top {
+    margin-bottom: 2rem;
+}
+
+.blog-top h4 {
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+}
+
+.banner-spot {
+    padding: 0 !important;
+    border: 1px solid #e2e2e2;
+}
+
+.page-wrapper .banner-spot {
+    padding: 1rem !important;
+    border: 1px solid #e2e2e2;
+}
+
+.blog-top .fa {
+    font-size: 18px !important;
+    line-height: 1 !important;
+    padding-left: 10px;
+}
+
+.blog-meta small a,
+.blog-meta small {
+    font-weight: 500;
+    color: #999 !important;
+}
+
+.fa-star {
+    font-size: 12px;
+    margin: 0 -2px 0 0;
+}
+
+.social-button {
+    background-color: #dddddd;
+    display: table;
+    padding: 0.5rem 1rem;
+    color: #ffffff !important;
+    position: relative;
+    width: 100%;
+}
+
+.social-button .fa {
+    color: #ffffff !important;
+}
+
+.social-button p {
+    margin: 10px 0 0;
+    padding: 0;
+    color: #ffffff !important;
+    line-height: 1;
+}
+
+.facebook-button {
+    background-color: #3b5998;
+}
+.instagram-button{
+    background-color: #f09433;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+
+.twitter-button {
+    background-color: #1da1f2;
+}
+
+.google-button {
+    background-color: #ea4335;
+}
+
+.youtube-button {
+    background-color: #cd201f;
+}
+
+.blog-meta .bg-orange {
+    color: #ffffff !important;
+    padding: 0 0.8rem;
+    border-radius: 3px;
+}
+
+.blog-meta small.firstsmall:after {
+    content: "" !important;
+    padding-left: 0;
+}
+
+.footer {
+    background-color: #000000;
+    background-image: none;
+}
+
+.footer .widget-title {
+    color: #ffffff !important;
+}
+
+.footer p {
+    color: #999999 !important;
+}
+
+.footer a {
+    color: #999999 !important;
+}
+
+.footer .link-widget li {
+    border-color: #444;
+}
+
+.trend-videos h4 {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.trend-videos h4 a {
+    color: #111111 !important;
+}
+
+.trend-videos hr.invis {
+    margin: 1rem 0;
+}
+
+.navbar-toggler-right {
+    top: 18px;
+}
+
+.blog-title-area span a {
+    font-size: 13px;
+}
+
+.pp .float-right {
+    margin-left: 2rem;
+}
+
+.trend-videos .hovereffect span:before {
+    opacity: 1 !important;
+    display: block !important;
+    visibility: visible !important;
+}
+
+.bg-orange {
+    background-color: #FF6347 !important;
+}
+
+.page-title .bg-orange,
+.masonry-box:hover .blog-meta span.bg-orange,
+.color-orange a {
+    background-color: #FF6347 !important;
+}
+
+.footer a:hover,
+.footer .fa:hover,
+.footer .fa:focus {
+    color: #0091e5 !important;
+}
+
+.authorbox p a,
+.pp a,
+.blog-top .fa-rss,
+a:hover,
+a:focus {
+    color: #FF6347 !important;
+}
+
+.btn,
+.page-link:hover,
+.page-link:focus,
+.btn:hover,
+.btn:focus {
+    color: #ffffff !important;
+    background: rgba(0, 0, 0, 0) linear-gradient(to right, #0091e5 0px, #00b7e5 100%) repeat scroll 0 0 !important
+}
+
+.active-link{
+    color: #ffffff !important;
+    background: rgba(0, 0, 0, 0) linear-gradient(to right, #0091e5 0px, #00b7e5 100%) repeat scroll 0 0 !important
+}
+
+.tag-cloud-single span,
+.navbar-inverse {
+    color: #ffffff !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0) linear-gradient(to right, #0091e5 0px, #00b7e5 100%) repeat scroll 0 0 !important
+}
+
+.gp-button.btn-primary:hover,
+.gp-button.btn-primary:focus,
+.gp-button.btn-primary {
+    border-color: #DA5333 !important;
+    background: #DA5333 !important;
+}
+
+.fb-button.btn-primary:focus,
+.fb-button.btn-primary:hover,
+.fb-button.btn-primary {
+    background: #3B5998 !important;
+    border-color: #3B5998 !important;
+}
+
+.tw-button.btn-primary:hover,
+.tw-button.btn-primary:focus,
+.tw-button.btn-primary {
+    background: #00B6F1 !important;
+    border-color: #00B6F1 !important;
+}
+
+/* -----------------------------------------------  Benim eklediğim CSS'ler  ------------------------------------- */
+/* ------------------- anasayfa ---------------------*/
+.home .latest-posts-spinner{
+    display: flex;
+    justify-content: center;
+}
+.page-loading{
+    display: flex;
+    height: 75vh;
+    justify-content: center;
+    align-items: center;
+}
+/*--------------------- Sayfalardaki sağ section ---------------------*/ 
+.hidden-category{
+    display: none;
+}
+.show-all-categories{
+    list-style: none;
+}
+/* Post detayları */ 
+.comment-button{
+    cursor: pointer;
+}
+.comment-textarea{
+    resize: none;
+}
+.another-post-img{
+    height: 200px;
+}
+.comments-list .media{
+    display: block;
+}
+.comments-list .comment-answer{
+    padding-left: 5%;
+    padding-top: 2%;
+}
+.comments-list .comment-answer h4{
+    font-size: 13px;
+}
+.comments-list .comment-answer p{
+    font-size: 12px;
+}
+.selected-comment p{
+    font-size: 13px;
+    color: #ff6b6b;
+}
+.selected-comment p a{
+    color: red !important;
+    font-size: 20px;
+    margin-left: 10px;
+}
+.comment-form-response .comment-error small{
+    color: red;
+}
+.comment-form-response .comment-error:last-child{
+    margin-bottom: 20px;
+}
+.comment-form-response .comment-success{
+    color:green;
+}
+.comment-form-response .comment-success:last-child{
+    margin-bottom: 20px;
+}
+/*-------------------------------- footer -------------------------------*/
+.newsletter-widget .nameSurname{
+    margin-top: 5px;
+}
+.newsletter-widget form button{
+    margin-top: 5px;
+    cursor: pointer;
+}
+/*----------------------------------  common -----------------------------*/
+.category-list{
+    list-style: none;
+}
+.category-list li a{
+    color: black;
+}
+/*-------------------------------- category posts -------------------------*/
+.category-posts .posts-loading{
+    display: flex;
+    justify-content: center;
+}
+/*-------------------------------- admin -----------------------------------*/
+
+/* LOGIN-PAGE */
+.login-page{
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/images/panel-background.jpg');
+}
+.login-page .login {
+    width: 400px;
+    margin: 16px auto;
+    font-size: 16px;
+}
+.login-page .login-header,
+.login-page .login p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.login-page .login-triangle {
+  width: 0;
+  margin-right: auto;
+  margin-left: auto;
+  border: 12px solid transparent;
+  border-bottom-color: #28d;
+}
+.login-page .login-header {
+  background: #28d;
+  padding: 20px;
+  font-size: 1.4em;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+.login-page .login-container {
+  background: #ebebeb;
+  padding: 12px;
+}
+.login-page .login p {
+  padding: 12px;
+}
+.login-page .login input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  padding: 16px;
+  outline: 0;
+  font-family: inherit;
+  font-size: 0.95em;
+}
+.login-page .login input[type="email"],
+.login-page .login input[type="password"] {
+  background: #fff;
+  border-color: #bbb;
+  color: #555;
+}
+.login-page .login input[type="email"]:focus,
+.login-page .login input[type="password"]:focus {
+  border-color: #05a;
+}
+.login-page .login input[type="submit"] {
+  background: #28d;
+  border-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+.login-page .login input[type="submit"]:hover {
+  background: #17c;
+}
+.login-page
+.login input[type="submit"]:focus {
+  border-color: #05a;
+}
+.login-page .login .login-error{
+    color: red;
+}
+/* ADMIN - LEFT MENU - PANEL */
+.vertical-nav {
+    min-width: 17rem;
+    width: 17rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s;
+  }
+  .page-content {
+    width: calc(100% - 17rem);
+    margin-left: 17rem;
+    transition: all 0.4s;
+  }
+  
+  /* for toggle behavior */
+  
+  #sidebar.active {
+    margin-left: -17rem;
+  }
+  
+  #content.active {
+    width: 100%;
+    margin: 0;
+  }
+  
+  @media (max-width: 768px) {
+    #sidebar {
+      margin-left: -17rem;
+    }
+    #sidebar.active {
+      margin-left: 0;
+    }
+    #content {
+      width: 100%;
+      margin: 0;
+    }
+    #content.active {
+      margin-left: 17rem;
+      width: calc(100% - 17rem);
+    }
+  }
+
+  .admin .active-page{
+    background-color:#0275d8 !important;
+    color:white;
+  }
+  .admin #sidebar ul li:hover a{
+      background-color: lightblue;
+      color: white !important;
+  }
+  .admin #sidebar ul li a:focus{
+    background-color: lightblue;
+    color: white !important;
+  }
+/* ADD POST */
+
+.add-post-wrapper .editor-wrapper{
+    height: 600px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    border: 2px solid #aaa;
+}
+.add-post-wrapper input,.add-post-wrapper select{
+    margin-bottom: 10px;
+}
+.add-post-wrapper .input-text{
+    display: inline-block;
+    width: 150px;
+}
+.add-post-wrapper .post-title{
+    width: 50%;
+}
+.add-post-wrapper .post-cover-photo{
+    width: 50%;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+}
+.add-post-wrapper .category-select{
+    margin-bottom: 5px;
+    width: 50%;
+}
+.add-post-wrapper .add-post-button{
+    width: 100px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.add-post-wrapper .editor-wrapper img{
+    width: 300px;
+    height: 300px;
+}
+/* CATEGORIES */
+.admin .categories{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.admin .categories .add-category-btn{
+    width: 150px;
+    margin-top: 10px;
+}
+.admin .admin-page-table{
+    width: 80%;
+    margin: 20px auto;
+}
+.admin .delete-button{
+    padding: 15px;
+    background-color: #cd4a77;
+    color: white !important;
+    border-radius: 10%;
+    box-shadow: 4px 2px lightgray;
+}
+.admin .edit-button{
+    padding: 15px;
+    background-color: #83c5be;
+    color: white !important;
+    border-radius: 10%;
+    box-shadow: 4px 2px lightgray;
+}
+.admin .delete-button:hover,
+.admin .edit-button:hover{
+    color: black !important;
+}
+/*  ALL POSTS  */
+.admin .all-posts-wrapper{
+    display: flex;
+    width: 100%;
+}
+.admin .all-posts-table{
+    width: 80%;
+    margin: 20px auto;
+}
+/* COMMENTS */
+
+.admin .comments .card {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0px solid transparent;
+    border-radius: 0px;
+    border-color: darkgray;
+    border-width: 1px;
+    border-style: dashed;
+    padding: 40px;
+}
+
+.admin .comments .card-body {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem
+}
+
+.admin .comments .card .card-title {
+    position: relative;
+    font-weight: 600;
+    margin-bottom: 10px
+}
+
+.admin .comments .comment-widgets {
+    position: relative;
+    margin-bottom: 10px
+}
+
+.admin .comments .comment-widgets .comment-row {
+    border-bottom: 1px solid transparent;
+    padding: 14px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 10px 0
+}
+
+.admin .comments .p-2 {
+    padding: 0.5rem !important
+}
+
+.admin .comments .comment-text {
+    padding-left: 15px
+}
+
+.admin .comments .w-100 {
+    width: 100% !important
+}
+
+.admin .comments .m-b-10 {
+    margin-bottom: 10px
+}
+
+.admin .comments .btn-danger{
+    color: #fff ;
+    background-color: #e63946;
+    padding: 3px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.admin .comments .btn-danger:hover{
+    color: #fff !important;
+    background-color: #d62828;
+}
+.admin .comments .comment-widgets .comment-row:hover {
+    background: rgba(0, 0, 0, 0.05)
+}
+.admin .comments a{
+    color: darkgray;
+}
+/* --------------------------------------------------------------------------------------------------------------- */
+
+@media (max-width: 1080px) {
+    .first-section .blog-meta h4 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 980px) {
+    .first-section .blog-meta h4 {
+        font-size: 16px;
+    }
+    .shadow-desc {
+        padding: 1rem 0.5rem;
+    }
+    .last-slot,
+    .second-slot,
+    .first-slot {
+        float: none;
+        width: 50%;
+        display: inline-block;
+    }
+}
