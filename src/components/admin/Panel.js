@@ -6,12 +6,14 @@ import {RiFileAddLine} from 'react-icons/ri';
 import{AiFillTags} from 'react-icons/ai';
 import {IoDocumentTextOutline} from 'react-icons/io5';
 import {FaComments} from 'react-icons/fa';
+import {FcAbout} from 'react-icons/fc';
 
 // my components
 import AddPost from './panel_components/AddPost';
 import Categories from './panel_components/Categories';
 import AllPosts from './panel_components/AllPosts';
 import Comments from './panel_components/Comments';
+import AboutMe from './panel_components/AboutMe';
 
 export default class Panel extends Component {
     state = {
@@ -42,6 +44,8 @@ export default class Panel extends Component {
             return <AllPosts changeActivePage={this.changeActivePage}/>
         else if(activePage === 'Comments')
             return <Comments />
+        else if(activePage === 'AboutMe')
+            return <AboutMe />
         else
             return <div>asdasfsfafasfsa</div>
     }
@@ -97,6 +101,14 @@ export default class Panel extends Component {
                             href='#'
                         > 
                             <FaComments /> Yorumlar
+                        </a>
+                    </li>
+                    <li className="nav-item">
+                        <a  className={activePage === 'AboutMe' ? 'nav-link text-dark font-italic active-page' : 'nav-link text-dark font-italic'} 
+                            onClick={() => this.changeActivePage('AboutMe')}
+                            href='#'
+                        > 
+                            <FcAbout /> Hakkımda
                         </a>
                     </li>
                 </ul>

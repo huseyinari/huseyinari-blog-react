@@ -43,7 +43,7 @@ class AddPost extends Component {
     editorOnChange = (value) => {
         let {postData} = this.state;
         postData['postContent'] = value;
-        this.setState({postData},() => console.log(postData));
+        this.setState({postData});
     }
     /* --------------------- Resim Yükle -------------------------- */
     imageInputChanged = (e,type) => {
@@ -88,7 +88,7 @@ class AddPost extends Component {
         .then(responseData => this.setState({addImageResult:responseData}));
     }  
     /* --------------------------------------------------------- */
-    saveButtonClicked = () => {    // yazıyı ekle butonuna tıklandıktan 250ms sonra istek at - loading efekti için
+    saveButtonClicked = () => {  
         this.setState({loading:true});
         const {selectedPost} = this.props;
 
@@ -100,7 +100,7 @@ class AddPost extends Component {
     addPostToServer = () => {
         const url = apiURL + '/api/admin/add_post';
         const {postData} = this.state;
-
+        
         fetch(url,{
             method:'POST',
             headers:{
@@ -111,6 +111,7 @@ class AddPost extends Component {
         })
         .then(response => response.json())
         .then(responseData => this.setState({addOrUpdateResponse:responseData,loading:false}));
+        
     }
     updatePostToServer = () => {
         const url = apiURL + '/api/admin/update_post';
@@ -193,10 +194,17 @@ class AddPost extends Component {
                         <div className="input-text" >Yazı Başlığı : </div>
                         <input className="post-title" placeholder="Yazı Başlığı" name="title" value={postData['title']} onChange={this.handleChange} minLength={5} maxLength={100}/>
                     </div>
+                    {/*         KAPAK RESMİNİ SUNUCUYA YÜKLEMEK İSTERSEN BU KISMI AÇ, ALTTAKİNİ KAPAT
                     <div>
                         <div className="input-text">Yazı Kapak Resmi : </div>
                         <input type="file" className="post-cover-photo" onChange={(e) => this.imageInputChanged(e,'coverPhoto')}/>
                     </div>
+                    */}
+                    <div>
+                        <div className="input-text">Kapak Resmi URL: </div>
+                        <input className="post-cover-photo" value={postData['coverPhoto']} onChange={(e) => this.setState({postData:{...postData,coverPhoto:e.target.value}})}/>
+                    </div>
+
                     <div>
                         <div className="input-text">Yazı Kategorisi : </div>
                         <select className="category-select" name="categoryId" onChange={this.handleChange} value={postData['categoryId']}>
@@ -226,9 +234,14 @@ class AddPost extends Component {
                             ? <Spin size="default" />
                             : <Button className="add-post-button" type="primary" icon={<BiBookAdd />} size="large" onClick={this.saveButtonClicked}> Kaydet </Button>
                         }
-                        <Button type="dashed" icon={<BiBookAdd />} size="large" style={{marginLeft:10}} onClick={() => this.setState({addImageModalVisible:true})}>
-                            Resim Ekle
-                        </Button>
+                        {
+                            /* SUNUCUYA RESİM YÜKLEME - HEROKU UYGULAMASI İÇİN KAPALI
+                                <Button type="dashed" icon={<BiBookAdd />} size="large" style={{marginLeft:10}} onClick={() => this.setState({addImageModalVisible:true})}>
+                                    Resim Ekle
+                                </Button>
+                            */
+                        }
+                        
                     </div>
 
                     {/* resim ekleme modal */}

@@ -503,7 +503,9 @@ a:focus {
   }
   
   /* for toggle behavior */
-  
+  #sidebarCollapse{
+      cursor: pointer;
+  }
   #sidebar.active {
     margin-left: -17rem;
   }
@@ -702,6 +704,23 @@ a:focus {
 }
 .admin .comments a{
     color: darkgray;
+}
+/* HAKKIMDA */
+.admin .about-me .input-group-text{
+    background-color: #e9ecef;
+    padding: 10px 10px;
+}
+.admin .about-me .saveButton{
+    padding: 10px;
+    background-color: #5cb85c;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    width: 150px;
+}
+.admin .about-me .saveButton:hover{
+    background-color: green;
 }
 /* --------------------------------------------------------------------------------------------------------------- */
 

@@ -13,7 +13,6 @@ import PopulerPosts from '../common/PopulerPosts';
 import Categories from '../common/Categories';
 import SocialButtons from '../common/SocialButtons';
 import GoToTopButton from '../common/GoToTopButton';
-import PostStars from '../common/PostStars';
 // redux
 import {connect} from 'react-redux';
 
@@ -92,7 +91,7 @@ class Home extends Component{
         return randomPosts.map( (post,index) => (
             <div className="second-slot" key={index}>
                 <div className="masonry-box post-media">
-                    <img src={apiURL + '/post_images/' + post.coverPhoto} alt="" width="25%" height={400} />
+                    <img src={post.coverPhoto} alt="" width="25%" height={400} />
                     <div className="shadoweffect">
                         <div className="shadow-desc">
                             <div className="blog-meta">
@@ -132,7 +131,7 @@ class Home extends Component{
                     <div className="col-md-4">
                         <div className="post-media">
                             <Link to={"/yazilar/" + post.seo}>
-                                <img src={apiURL + '/post_images/' + post.coverPhoto} alt="" width={250} height={150} />
+                                <img src={post.coverPhoto} alt="" width={250} height={150} />
                                 <div className="hovereffect"></div>
                             </Link>
                         </div>
@@ -166,11 +165,6 @@ class Home extends Component{
                             <i class="fa fa-comment" aria-hidden="true"></i>
                             {" " + post.commentCount}
                         </small>
-                        <div>
-                            {
-                                <PostStars starCount={post.starAverage}/>
-                            }
-                        </div>
                     </div>
                 </div>
                 <hr className="invis" />
@@ -295,11 +289,6 @@ class Home extends Component{
                                             </ul>
                                         </div>
                                     </div>
-                                </div>
-
-                                <div className="widget">
-                                    <h2 className="widget-title">Takipte Kalın</h2>
-                                    <SocialButtons />
                                 </div>
                             </div>
                         </div>

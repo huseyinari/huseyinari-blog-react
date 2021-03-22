@@ -15,7 +15,6 @@ import {Link} from 'react-router-dom';
 import MostReadPosts from '../common/MostReadPosts';
 import PopulerPosts from '../common/PopulerPosts';
 import Categories from '../common/Categories';
-import SocialButtons from '../common/SocialButtons';
 import GoToTopButton from '../common/GoToTopButton';
 
 class Post extends Component{
@@ -93,7 +92,8 @@ class Post extends Component{
             body:JSON.stringify({
                 postId:postDetail.id,
                 nameSurname:commentData.nameSurname,
-                commentContent:commentData.content
+                commentContent:commentData.content,
+                token:sessionStorage.getItem('token') ? sessionStorage.getItem('token') : '_' // boş değer göndermiyor onun için _ gönderdim
             })
         })
         .then(response => response.json())
@@ -126,7 +126,8 @@ class Post extends Component{
             body:JSON.stringify({
                 commentId:selectedComment.id,
                 nameSurname:commentData.nameSurname,
-                answerContent:commentData.content
+                answerContent:commentData.content,
+                token:sessionStorage.getItem('token') ? sessionStorage.getItem('token') : '_' // boş değer göndermiyor onun için _ gönderdim
             })
         })
         .then(response => response.json())
@@ -194,7 +195,7 @@ class Post extends Component{
                     <div className="blog-box">
                     <div className="post-media another-post-img">
                         <a href={"/yazilar/" + post.seo}>
-                            <img src={apiURL + '/post_images/' + post.coverPhoto} className="img-fluid" />
+                            <img src={postDetail.coverPhoto} className="img-fluid" />
                             <div className="hovereffect">
                                 <span className />
                             </div>
@@ -213,16 +214,11 @@ class Post extends Component{
         return answers.map( (answer,index) => (
             <div className="comment-answer" key={index}>
                 <h4>
-                {
-                    answer.isAdminAnswer === 1 
-                    ? (
-                        <div>
-                            {" " + answer.nameSurname + " "}
-                            <Badge size="small" count={"Admin"}/>
-                        </div>
-                    )
-                    : <span>{answer.nameSurname}</span>
-                }
+                    <span>
+                        {answer.nameSurname + " "}
+                        {answer.isAdminAnswer === 1 ? (<Badge size="small" count={"Yönetici"}/>) : null}
+                    </span>
+                    <small>{convertDate(answer.created_at)}</small>
                 </h4>
                 <p>{answer.answerContent}</p>
             </div>
@@ -246,16 +242,10 @@ class Post extends Component{
                     }
                     <div className="media-body">
                         <h4 className="media-heading user_name">
-                            {
-                                comment.isAdminComment === 1 
-                                ? (
-                                    <div>
-                                        {" " + comment.nameSurname + " "}
-                                        <Badge size="small" count={"Admin"}/>
-                                    </div>
-                                )
-                                : <span>{comment.nameSurname}</span>
-                            }
+                            <span>
+                                {comment.nameSurname + " "}
+                                {comment.isAdminComment === 1 ? (<Badge size="small" count={"Yönetici"}/>) : null}
+                            </span>
                             <small>{convertDate(comment.created_at)}</small>
                         </h4>
                         <p>{comment.commentContent}</p>
@@ -356,7 +346,7 @@ class Post extends Component{
                             */}
                         </div>
                         <div className="single-post-media">
-                            <img src={apiURL + '/post_images/' + postDetail.coverPhoto} alt="" className="img-fluid" />
+                            <img src={postDetail.coverPhoto} alt="" className="img-fluid" />
                         </div>
                         <div className="blog-content">  
                             { ReactHtmlParser(postDetail.postContent) }
@@ -424,7 +414,7 @@ class Post extends Component{
                             */
                         }
                         <div className="custombox authorbox clearfix">
-                            <h4 className="small-title">Yazar Hakkında</h4>
+                            <h4 className="small-title">Hakkımda</h4>
                             <div className="row">
                             <div className="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                                 <img src={apiURL + '/author_images/' + postDetail.get_post_owner.photo} alt="" className="img-fluid rounded-circle" /> 
@@ -547,11 +537,6 @@ class Post extends Component{
                                     </ul>
                                 </div>
                             </div>
-                        </div>
-
-                        <div className="widget">
-                            <h2 className="widget-title">Takipte Kalın</h2>
-                            <SocialButtons />
                         </div>
                         {/* ----------- REKLAM ALANI -----------
                             <div className="widget">

@@ -24,14 +24,16 @@ const Categories = ({categories}) => {
             </li>
         ))
     ));
-
-    categoriesJSX.push((
-        <li className="show-all-categories" onClick={showAllCategories}>
-            <small>
-                <a>Tüm kategorileri gör...</a>
-            </small>
-        </li>
-    ))
+    
+    if(categories.length > visibleCategoryCount){
+        categoriesJSX.push((
+            <li className="show-all-categories" onClick={showAllCategories}>
+                <small>
+                    <a><b style={{fontSize:13}}><u>Tüm kategorileri gör...</u></b></a>
+                </small>
+            </li>
+        ))
+    }
     
     return categoriesJSX;
 }

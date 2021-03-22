@@ -28,14 +28,6 @@ class Header extends Component{
                             <Link to="/hakkimda" className="nav-item">
                                 <a className="nav-link" href="/tech-category-03.html">Hakkımda</a>
                             </Link>
-                            <Link to="/iletisim" className="nav-item">
-                                <a className="nav-link" href="/tech-contact.html">İletişim</a>
-                            </Link>
-                            <Link to="/asdasd">
-                                <li className="nav-item">
-                                    <a className="nav-link">Olmayan Sayfa</a>
-                                </li> 
-                            </Link>  
                         </ul>
                         <ul className="navbar-nav mr-2">
                             <li className="nav-item">

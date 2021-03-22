@@ -50,7 +50,6 @@ class AllPosts extends Component {
             .then(response => response.json())
             .then(responseData => this.setState({deleteResponse:responseData}))
         }
-
     }
     renderDeleteResponse = () => {
         const {deleteResponse} = this.state;
@@ -101,6 +100,7 @@ class AllPosts extends Component {
                 title:post.title,
                 postContent:post.postContent,
                 categoryId:post.categoryId,
+                coverPhoto:post.coverPhoto
             })
         });
 

@@ -12,7 +12,6 @@ import SocialButtons from '../common/SocialButtons';
 import MostReadPosts from '../common/MostReadPosts';
 import GoToTopButton from '../common/GoToTopButton';
 import Pagination from '../common/Pagination';
-import PostStars from '../common/PostStars';
 // api url
 import apiURL from '../../apiURL';
 // helper
@@ -83,7 +82,7 @@ class CategoryPosts extends Component {
             <div className="col-md-4">
               <div className="post-media">
                 <Link to={"/yazilar/" + post.seo} title>
-                  <img src={apiURL+'/post_images/' + post.coverPhoto} alt="" className="img-fluid" />
+                  <img src={post.coverPhoto} alt="" className="img-fluid" />
                   <div className="hovereffect" />
                 </Link>
               </div>
@@ -96,9 +95,6 @@ class CategoryPosts extends Component {
               <small><Link to="/hakkimda" title>{post.get_post_owner.nameSurname}</Link></small>
               <small><i className="fa fa-eye" /> {post.viewCount}</small>
               <small><i class="fa fa-comment" aria-hidden="true"></i> {" " + post.commentCount} </small>
-              <div>
-                <small> <PostStars starCount={post.starAverage}/> </small>
-              </div>
             </div>
           </div>
           <hr className="invis" />
@@ -207,11 +203,6 @@ class CategoryPosts extends Component {
                                     </ul>
                                 </div>
                             </div>
-                        </div>
-
-                        <div className="widget">
-                            <h2 className="widget-title">Takipte Kalın</h2>
-                            <SocialButtons />
                         </div>
                         
                     </div>
