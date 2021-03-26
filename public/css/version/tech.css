@@ -340,7 +340,14 @@ a:focus {
 .show-all-categories{
     list-style: none;
 }
-/* Post detayları */ 
+/*-------------------------- Post detayları --------------------------------------*/ 
+.blog-content img{
+    width: 100%;
+    height: 300px;
+}
+.single-post-media img{
+    height: 400px;
+}
 .comment-button{
     cursor: pointer;
 }
