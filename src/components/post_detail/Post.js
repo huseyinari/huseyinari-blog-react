@@ -216,7 +216,7 @@ class Post extends Component{
                 <h4>
                     <span>
                         {answer.nameSurname + " "}
-                        {answer.isAdminAnswer === 1 ? (<Badge size="small" count={"Yönetici"}/>) : null}
+                        {answer.isAdminAnswer === true ? (<Badge size="small" count={"Yönetici"}/>) : null}
                     </span>
                     <small>{convertDate(answer.created_at)}</small>
                 </h4>
@@ -244,7 +244,7 @@ class Post extends Component{
                         <h4 className="media-heading user_name">
                             <span>
                                 {comment.nameSurname + " "}
-                                {comment.isAdminComment === 1 ? (<Badge size="small" count={"Yönetici"}/>) : null}
+                                {comment.isAdminComment === true ? (<Badge size="small" count={"Yönetici"}/>) : null}
                             </span>
                             <small>{convertDate(comment.created_at)}</small>
                         </h4>
