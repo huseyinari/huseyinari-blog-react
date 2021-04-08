@@ -195,7 +195,7 @@ class Post extends Component{
                     <div className="blog-box">
                     <div className="post-media another-post-img">
                         <a href={"/yazilar/" + post.seo}>
-                            <img src={postDetail.coverPhoto} className="img-fluid" />
+                            <img src={post.coverPhoto} className="img-fluid" />
                             <div className="hovereffect">
                                 <span className />
                             </div>
